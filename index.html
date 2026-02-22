@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScanAI — Know What You Consume</title>
+  <meta name="description" content="ScanAI uses advanced AI to instantly analyze any product and tell you if it's good for your health. Get a health score, ingredient breakdown, and personalized insights." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect width="32" height="32" rx="8" fill="url(#logo-grad)" />
+          <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32">
+              <stop stop-color="#4ADE80" />
+              <stop offset="1" stop-color="#22D3EE" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>ScanAI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#demo">Live Demo</a>
+        <a href="#testimonials">Reviews</a>
+      </div>
+      <a href="#download" class="nav-cta">Download Free</a>
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#demo">Live Demo</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#download" class="mobile-cta">Download Free</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge fade-up">
+          <span class="badge-dot"></span>
+          AI-Powered Health Scanner
+        </div>
+        <h1 class="hero-title fade-up delay-1">
+          Know what you
+          <br />
+          <span class="gradient-text">consume.</span>
+        </h1>
+        <p class="hero-subtitle fade-up delay-2">
+          Scan any product with your camera and instantly get a health score, ingredient analysis, allergen warnings, and personalized recommendations.
+        </p>
+        <div class="hero-actions fade-up delay-3">
+          <a href="#download" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download App
+          </a>
+          <a href="#demo" class="btn btn-ghost">
+            See it in action
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats fade-up delay-4">
+          <div class="stat">
+            <span class="stat-number">2M+</span>
+            <span class="stat-label">Products Scanned</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">4.9</span>
+            <span class="stat-label">App Store Rating</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">500K+</span>
+            <span class="stat-label">Happy Users</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual fade-up delay-2">
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="scan-ui">
+                <div class="scan-header">
+                  <span class="scan-title">Scan Result</span>
+                  <span class="scan-date">Just now</span>
+                </div>
+                <div class="scan-product">
+                  <div class="product-icon">🥤</div>
+                  <div class="product-info">
+                    <span class="product-name">Energy Drink XR</span>
+                    <span class="product-brand">BevCorp Inc.</span>
+                  </div>
+                </div>
+                <div class="score-ring-container">
+                  <svg class="score-ring" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                    <circle class="score-ring-progress" cx="60" cy="60" r="52" stroke="url(#score-grad)" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="98" transform="rotate(-90 60 60)"/>
+                    <defs>
+                      <linearGradient id="score-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#F59E0B"/>
+                        <stop offset="100%" stop-color="#EF4444"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="score-value">
+                    <span class="score-number">42</span>
+                    <span class="score-max">/100</span>
+                  </div>
+                </div>
+                <div class="score-label caution">Caution</div>
+                <div class="scan-details">
+                  <div class="detail-row">
+                    <span class="detail-icon red">⚠</span>
+                    <span>High Sugar (39g)</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="detail-icon yellow">⚡</span>
+                    <span>Caffeine 200mg</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="detail-icon red">🧪</span>
+                    <span>Artificial Colors</span>
+                  </div>
+                  <div class="detail-row">
+                    <span class="detail-icon green">✓</span>
+                    <span>No Allergens</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Health Score</span>
+        <span class="marquee-dot">·</span>
+        <span>Ingredient Analysis</span>
+        <span class="marquee-dot">·</span>
+        <span>Allergen Detection</span>
+        <span class="marquee-dot">·</span>
+        <span>Nutrition Facts</span>
+        <span class="marquee-dot">·</span>
+        <span>Barcode Scanner</span>
+        <span class="marquee-dot">·</span>
+        <span>AI Recommendations</span>
+        <span class="marquee-dot">·</span>
+        <span>Additive Warnings</span>
+        <span class="marquee-dot">·</span>
+        <span>Health Score</span>
+        <span class="marquee-dot">·</span>
+        <span>Ingredient Analysis</span>
+        <span class="marquee-dot">·</span>
+        <span>Allergen Detection</span>
+        <span class="marquee-dot">·</span>
+        <span>Nutrition Facts</span>
+        <span class="marquee-dot">·</span>
+        <span>Barcode Scanner</span>
+        <span class="marquee-dot">·</span>
+        <span>AI Recommendations</span>
+        <span class="marquee-dot">·</span>
+        <span>Additive Warnings</span>
+        <span class="marquee-dot">·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag fade-up">Features</span>
+        <h2 class="section-title fade-up delay-1">Everything you need to<br /><span class="gradient-text">eat healthier.</span></h2>
+        <p class="section-desc fade-up delay-2">Our AI analyzes thousands of data points in milliseconds to give you the most accurate health assessment of any product.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3>Health Score</h3>
+          <p>Get an instant 0–100 health score for any product based on ingredients, nutritional value, and additives.</p>
+        </div>
+        <div class="feature-card fade-up delay-1">
+          <div class="feature-icon cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>Ingredient Breakdown</h3>
+          <p>See every ingredient decoded with plain-English explanations. No more confusing chemical names.</p>
+        </div>
+        <div class="feature-card fade-up delay-2">
+          <div class="feature-icon orange">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>Allergen Alerts</h3>
+          <p>Set your dietary profile and get instant warnings for allergens, intolerances, and dietary conflicts.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h3>Barcode Scan</h3>
+          <p>Point your camera at any barcode. Our database covers over 2 million products worldwide.</p>
+        </div>
+        <div class="feature-card fade-up delay-1">
+          <div class="feature-icon pink">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M20.7 11A8.96 8.96 0 0 0 13 3.3"/></svg>
+          </div>
+          <h3>Macro Tracking</h3>
+          <p>Track proteins, carbs, fats, fiber, sodium, and more. See how each product fits your daily goals.</p>
+        </div>
+        <div class="feature-card fade-up delay-2">
+          <div class="feature-icon teal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>AI Recommendations</h3>
+          <p>Get healthier alternatives suggested instantly. Our AI finds better options available near you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag fade-up">How It Works</span>
+        <h2 class="section-title fade-up delay-1">Three seconds to<br /><span class="gradient-text">better choices.</span></h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fade-up">
+          <div class="step-number">01</div>
+          <div class="step-visual">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <h3>Scan</h3>
+          <p>Point your camera at any product label, barcode, or ingredient list. Our AI vision handles the rest.</p>
+        </div>
+        <div class="step-connector fade-up delay-1">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div class="step-card fade-up delay-1">
+          <div class="step-number">02</div>
+          <div class="step-visual">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3>Analyze</h3>
+          <p>Our AI cross-references ingredients against health databases, research papers, and safety reports.</p>
+        </div>
+        <div class="step-connector fade-up delay-2">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+        </div>
+        <div class="step-card fade-up delay-2">
+          <div class="step-number">03</div>
+          <div class="step-visual">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <h3>Decide</h3>
+          <p>Get a clear health score, ingredient warnings, and better alternatives — all in seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIVE DEMO ==================== -->
+  <section class="demo-section" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag fade-up">Live Demo</span>
+        <h2 class="section-title fade-up delay-1">See the score<br /><span class="gradient-text">in action.</span></h2>
+        <p class="section-desc fade-up delay-2">Click on any product below to see how ScanAI breaks it down.</p>
+      </div>
+      <div class="demo-container fade-up delay-2">
+        <div class="demo-products">
+          <button class="demo-product active" data-product="0">
+            <span class="demo-product-emoji">🍎</span>
+            <span class="demo-product-name">Organic Apple</span>
+          </button>
+          <button class="demo-product" data-product="1">
+            <span class="demo-product-emoji">🥤</span>
+            <span class="demo-product-name">Soda Pop</span>
+          </button>
+          <button class="demo-product" data-product="2">
+            <span class="demo-product-emoji">🥗</span>
+            <span class="demo-product-name">Greek Salad</span>
+          </button>
+          <button class="demo-product" data-product="3">
+            <span class="demo-product-emoji">🍩</span>
+            <span class="demo-product-name">Glazed Donut</span>
+          </button>
+          <button class="demo-product" data-product="4">
+            <span class="demo-product-emoji">🥑</span>
+            <span class="demo-product-name">Avocado Toast</span>
+          </button>
+        </div>
+        <div class="demo-result">
+          <div class="demo-result-inner" id="demoResult">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag fade-up">Testimonials</span>
+        <h2 class="section-title fade-up delay-1">Loved by people who<br /><span class="gradient-text">care about health.</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"I scanned my kid's cereal and was shocked. ScanAI showed me 3 harmful additives I had no idea about. Switched brands the same day."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div>
+              <span class="author-name">Sarah K.</span>
+              <span class="author-role">Mom of two</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"As a nutritionist, I recommend ScanAI to all my clients. It's incredibly accurate and saves so much time analyzing labels."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">D</div>
+            <div>
+              <span class="author-name">Dr. Mike R.</span>
+              <span class="author-role">Nutritionist</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up delay-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"I have celiac disease. This app has literally been a lifesaver — I catch hidden gluten sources that I would've missed."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div>
+              <span class="author-name">Jamie L.</span>
+              <span class="author-role">Celiac patient</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"The AI alternatives feature is insane. It found me a protein bar with better macros and half the sugar. Game changer for my cut."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <span class="author-name">Alex T.</span>
+              <span class="author-role">Fitness enthusiast</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Finally an app that tells me what all those chemical names actually mean. The ingredient breakdown is brilliant."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div>
+              <span class="author-name">Rachel M.</span>
+              <span class="author-role">Health blogger</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up delay-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Scanning groceries is now a habit. My family's eating cleaner than ever and we didn't even have to try that hard."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div>
+              <span class="author-name">Tom B.</span>
+              <span class="author-role">Dad & engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DOWNLOAD CTA ==================== -->
+  <section class="download-section" id="download">
+    <div class="download-glow"></div>
+    <div class="container">
+      <div class="download-content">
+        <div class="download-badge fade-up">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Free on iOS & Android
+        </div>
+        <h2 class="download-title fade-up delay-1">Start scanning.<br /><span class="gradient-text">Start living healthier.</span></h2>
+        <p class="download-desc fade-up delay-2">Join 500,000+ people who have already transformed their shopping habits. Download ScanAI for free today.</p>
+        <div class="download-buttons fade-up delay-3">
+          <a href="#" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div>
+              <span class="store-label">Download on the</span>
+              <span class="store-name">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.063l2.285 1.306a1 1 0 0 1 0 1.74l-2.286 1.306-2.532-2.532 2.533-2.82zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
+            <div>
+              <span class="store-label">Get it on</span>
+              <span class="store-name">Google Play</span>
+            </div>
+          </a>
+        </div>
+        <div class="download-rating fade-up delay-4">
+          <div class="rating-avatars">
+            <div class="rating-avatar" style="background: linear-gradient(135deg, #4ADE80, #22D3EE);">M</div>
+            <div class="rating-avatar" style="background: linear-gradient(135deg, #A78BFA, #EC4899);">K</div>
+            <div class="rating-avatar" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">J</div>
+            <div class="rating-avatar" style="background: linear-gradient(135deg, #22D3EE, #3B82F6);">S</div>
+          </div>
+          <div class="rating-info">
+            <div class="rating-stars">★★★★★ <span>4.9</span></div>
+            <div class="rating-count">from 50,000+ reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="url(#logo-grad2)" />
+              <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="logo-grad2" x1="0" y1="0" x2="32" y2="32">
+                  <stop stop-color="#4ADE80" />
+                  <stop offset="1" stop-color="#22D3EE" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>ScanAI</span>
+          </a>
+          <p class="footer-tagline">Making healthier choices effortless with the power of AI.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#demo">Live Demo</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 ScanAI. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.82a8.24 8.24 0 0 0 4.76 1.5V6.87a4.83 4.83 0 0 1-1-.18z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
