@@ -1,5 +1,5 @@
 /* ========================================
-   ScanAI — Interactive Scripts
+   Lumo AI | Interactive Scripts
    Scroll animations, demo, mobile menu
    ======================================== */
 

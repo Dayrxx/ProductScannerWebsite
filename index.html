@@ -3,38 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScanAI — Know What You Consume</title>
-  <meta name="description" content="ScanAI uses advanced AI to instantly analyze any product and tell you if it's good for your health. Get a health score, ingredient breakdown, and personalized insights." />
+  <title>Lumo AI | Know What You Consume</title>
+  <meta name="description" content="Lumo AI uses advanced AI to instantly analyze any product and tell you if it's good for your health. Get a health score, ingredient breakdown, and personalized insights." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <rect width="32" height="32" rx="8" fill="url(#logo-grad)" />
-          <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <defs>
-            <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32">
-              <stop stop-color="#4ADE80" />
-              <stop offset="1" stop-color="#22D3EE" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <span>ScanAI</span>
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logolumo.png" alt="Lumo" class="nav-logo-img" />
+        <span class="nav-logo-text">lumo</span>
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#demo">Live Demo</a>
         <a href="#testimonials">Reviews</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <a href="#download" class="nav-cta">Download Free</a>
+      <div class="nav-store-buttons">
+        <a href="#" class="store-btn store-btn-badge store-btn-apple store-btn-nav" aria-label="Download on the App Store">
+          <span class="store-btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          </span>
+          <span class="store-btn-text">
+            <span class="store-label">Download on the</span>
+            <span class="store-name">App Store</span>
+          </span>
+        </a>
+        <a href="#" class="store-btn store-btn-badge store-btn-play store-btn-nav" aria-label="Get it on Google Play">
+          <span class="store-btn-icon store-btn-icon-play">
+            <img src="assets/google-play-logo.png" alt="" width="22" height="22" />
+          </span>
+          <span class="store-btn-text">
+            <span class="store-label">GET IT ON</span>
+            <span class="store-name">Google Play</span>
+          </span>
+        </a>
+      </div>
       <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -49,7 +60,11 @@
     <a href="#how-it-works">How It Works</a>
     <a href="#demo">Live Demo</a>
     <a href="#testimonials">Reviews</a>
-    <a href="#download" class="mobile-cta">Download Free</a>
+    <a href="contact.html">Contact</a>
+    <div class="mobile-store-buttons">
+      <a href="#" class="store-btn store-btn-badge store-btn-apple"><span class="store-btn-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span class="store-btn-text"><span class="store-label">Download on the</span><span class="store-name">App Store</span></span></a>
+      <a href="#" class="store-btn store-btn-badge store-btn-play"><span class="store-btn-icon store-btn-icon-play"><img src="assets/google-play-logo.png" alt="" width="26" height="26" /></span><span class="store-btn-text"><span class="store-label">GET IT ON</span><span class="store-name">Google Play</span></span></a>
+    </div>
   </div>
 
   <!-- ==================== HERO ==================== -->
@@ -58,9 +73,13 @@
     <div class="hero-glow hero-glow-2"></div>
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-badge fade-up">
-          <span class="badge-dot"></span>
-          AI-Powered Health Scanner
+        <div class="hero-trust-pill fade-up">
+          <div class="trust-avatars">
+            <span class="trust-avatar"><img src="https://i.pravatar.cc/150?img=1" alt="" /></span>
+            <span class="trust-avatar"><img src="https://i.pravatar.cc/150?img=2" alt="" /></span>
+            <span class="trust-avatar"><img src="https://i.pravatar.cc/150?img=3" alt="" /></span>
+          </div>
+          <span class="trust-text">5M+ Scans completed</span>
         </div>
         <h1 class="hero-title fade-up delay-1">
           Know what you
@@ -70,89 +89,30 @@
         <p class="hero-subtitle fade-up delay-2">
           Scan any product with your camera and instantly get a health score, ingredient analysis, allergen warnings, and personalized recommendations.
         </p>
-        <div class="hero-actions fade-up delay-3">
-          <a href="#download" class="btn btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download App
+        <div class="hero-store-buttons fade-up delay-3">
+          <a href="#" class="store-btn store-btn-badge store-btn-apple" aria-label="Download on the App Store">
+            <span class="store-btn-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            </span>
+            <span class="store-btn-text">
+              <span class="store-label">Download on the</span>
+              <span class="store-name">App Store</span>
+            </span>
           </a>
-          <a href="#demo" class="btn btn-ghost">
-            See it in action
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <a href="#" class="store-btn store-btn-badge store-btn-play" aria-label="Get it on Google Play">
+            <span class="store-btn-icon store-btn-icon-play">
+              <img src="assets/google-play-logo.png" alt="" width="28" height="28" />
+            </span>
+            <span class="store-btn-text">
+              <span class="store-label">GET IT ON</span>
+              <span class="store-name">Google Play</span>
+            </span>
           </a>
-        </div>
-        <div class="hero-stats fade-up delay-4">
-          <div class="stat">
-            <span class="stat-number">2M+</span>
-            <span class="stat-label">Products Scanned</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">4.9</span>
-            <span class="stat-label">App Store Rating</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-number">500K+</span>
-            <span class="stat-label">Happy Users</span>
-          </div>
         </div>
       </div>
       <div class="hero-visual fade-up delay-2">
-        <div class="phone-mockup">
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="scan-ui">
-                <div class="scan-header">
-                  <span class="scan-title">Scan Result</span>
-                  <span class="scan-date">Just now</span>
-                </div>
-                <div class="scan-product">
-                  <div class="product-icon">🥤</div>
-                  <div class="product-info">
-                    <span class="product-name">Energy Drink XR</span>
-                    <span class="product-brand">BevCorp Inc.</span>
-                  </div>
-                </div>
-                <div class="score-ring-container">
-                  <svg class="score-ring" viewBox="0 0 120 120">
-                    <circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
-                    <circle class="score-ring-progress" cx="60" cy="60" r="52" stroke="url(#score-grad)" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="98" transform="rotate(-90 60 60)"/>
-                    <defs>
-                      <linearGradient id="score-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#F59E0B"/>
-                        <stop offset="100%" stop-color="#EF4444"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="score-value">
-                    <span class="score-number">42</span>
-                    <span class="score-max">/100</span>
-                  </div>
-                </div>
-                <div class="score-label caution">Caution</div>
-                <div class="scan-details">
-                  <div class="detail-row">
-                    <span class="detail-icon red">⚠</span>
-                    <span>High Sugar (39g)</span>
-                  </div>
-                  <div class="detail-row">
-                    <span class="detail-icon yellow">⚡</span>
-                    <span>Caffeine 200mg</span>
-                  </div>
-                  <div class="detail-row">
-                    <span class="detail-icon red">🧪</span>
-                    <span>Artificial Colors</span>
-                  </div>
-                  <div class="detail-row">
-                    <span class="detail-icon green">✓</span>
-                    <span>No Allergens</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="phone-glow"></div>
+        <div class="hero-video-wrap">
+          <video src="assets/testmockup2.mov" autoplay muted loop playsinline></video>
         </div>
       </div>
     </div>
@@ -293,7 +253,7 @@
             </svg>
           </div>
           <h3>Decide</h3>
-          <p>Get a clear health score, ingredient warnings, and better alternatives — all in seconds.</p>
+          <p>Get a clear health score, ingredient warnings, and better alternatives, all in seconds.</p>
         </div>
       </div>
     </div>
@@ -305,7 +265,7 @@
       <div class="section-header">
         <span class="section-tag fade-up">Live Demo</span>
         <h2 class="section-title fade-up delay-1">See the score<br /><span class="gradient-text">in action.</span></h2>
-        <p class="section-desc fade-up delay-2">Click on any product below to see how ScanAI breaks it down.</p>
+        <p class="section-desc fade-up delay-2">Click on any product below to see how Lumo AI breaks it down.</p>
       </div>
       <div class="demo-container fade-up delay-2">
         <div class="demo-products">
@@ -349,9 +309,9 @@
       <div class="testimonials-grid">
         <div class="testimonial-card fade-up">
           <div class="testimonial-stars">★★★★★</div>
-          <p>"I scanned my kid's cereal and was shocked. ScanAI showed me 3 harmful additives I had no idea about. Switched brands the same day."</p>
+          <p>"I scanned my kid's cereal and was shocked. Lumo AI showed me 3 harmful additives I had no idea about. Switched brands the same day."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">S</div>
+            <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=5" alt="" /></div>
             <div>
               <span class="author-name">Sarah K.</span>
               <span class="author-role">Mom of two</span>
@@ -360,9 +320,9 @@
         </div>
         <div class="testimonial-card fade-up delay-1">
           <div class="testimonial-stars">★★★★★</div>
-          <p>"As a nutritionist, I recommend ScanAI to all my clients. It's incredibly accurate and saves so much time analyzing labels."</p>
+          <p>"As a nutritionist, I recommend Lumo AI to all my clients. It's incredibly accurate and saves so much time analyzing labels."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">D</div>
+            <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=12" alt="" /></div>
             <div>
               <span class="author-name">Dr. Mike R.</span>
               <span class="author-role">Nutritionist</span>
@@ -371,9 +331,9 @@
         </div>
         <div class="testimonial-card fade-up delay-2">
           <div class="testimonial-stars">★★★★★</div>
-          <p>"I have celiac disease. This app has literally been a lifesaver — I catch hidden gluten sources that I would've missed."</p>
+          <p>"I have celiac disease. This app has literally been a lifesaver. I catch hidden gluten sources that I would've missed."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">J</div>
+            <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=9" alt="" /></div>
             <div>
               <span class="author-name">Jamie L.</span>
               <span class="author-role">Celiac patient</span>
@@ -384,7 +344,7 @@
           <div class="testimonial-stars">★★★★★</div>
           <p>"The AI alternatives feature is insane. It found me a protein bar with better macros and half the sugar. Game changer for my cut."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">A</div>
+            <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=11" alt="" /></div>
             <div>
               <span class="author-name">Alex T.</span>
               <span class="author-role">Fitness enthusiast</span>
@@ -395,7 +355,7 @@
           <div class="testimonial-stars">★★★★★</div>
           <p>"Finally an app that tells me what all those chemical names actually mean. The ingredient breakdown is brilliant."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">R</div>
+            <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=16" alt="" /></div>
             <div>
               <span class="author-name">Rachel M.</span>
               <span class="author-role">Health blogger</span>
@@ -406,7 +366,7 @@
           <div class="testimonial-stars">★★★★★</div>
           <p>"Scanning groceries is now a habit. My family's eating cleaner than ever and we didn't even have to try that hard."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">T</div>
+            <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=15" alt="" /></div>
             <div>
               <span class="author-name">Tom B.</span>
               <span class="author-role">Dad & engineer</span>
@@ -427,29 +387,33 @@
           Free on iOS & Android
         </div>
         <h2 class="download-title fade-up delay-1">Start scanning.<br /><span class="gradient-text">Start living healthier.</span></h2>
-        <p class="download-desc fade-up delay-2">Join 500,000+ people who have already transformed their shopping habits. Download ScanAI for free today.</p>
+        <p class="download-desc fade-up delay-2">Join 500,000+ people who have already transformed their shopping habits. Download Lumo AI for free today.</p>
         <div class="download-buttons fade-up delay-3">
-          <a href="#" class="store-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            <div>
+          <a href="#" class="store-btn store-btn-badge store-btn-apple" aria-label="Download on the App Store">
+            <span class="store-btn-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            </span>
+            <span class="store-btn-text">
               <span class="store-label">Download on the</span>
               <span class="store-name">App Store</span>
-            </div>
+            </span>
           </a>
-          <a href="#" class="store-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.063l2.285 1.306a1 1 0 0 1 0 1.74l-2.286 1.306-2.532-2.532 2.533-2.82zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
-            <div>
-              <span class="store-label">Get it on</span>
+          <a href="#" class="store-btn store-btn-badge store-btn-play" aria-label="Get it on Google Play">
+            <span class="store-btn-icon store-btn-icon-play">
+              <img src="assets/google-play-logo.png" alt="" width="28" height="28" />
+            </span>
+            <span class="store-btn-text">
+              <span class="store-label">GET IT ON</span>
               <span class="store-name">Google Play</span>
-            </div>
+            </span>
           </a>
         </div>
         <div class="download-rating fade-up delay-4">
           <div class="rating-avatars">
-            <div class="rating-avatar" style="background: linear-gradient(135deg, #4ADE80, #22D3EE);">M</div>
-            <div class="rating-avatar" style="background: linear-gradient(135deg, #A78BFA, #EC4899);">K</div>
-            <div class="rating-avatar" style="background: linear-gradient(135deg, #F59E0B, #EF4444);">J</div>
-            <div class="rating-avatar" style="background: linear-gradient(135deg, #22D3EE, #3B82F6);">S</div>
+            <div class="rating-avatar"><img src="https://i.pravatar.cc/150?img=33" alt="" /></div>
+            <div class="rating-avatar"><img src="https://i.pravatar.cc/150?img=44" alt="" /></div>
+            <div class="rating-avatar"><img src="https://i.pravatar.cc/150?img=52" alt="" /></div>
+            <div class="rating-avatar"><img src="https://i.pravatar.cc/150?img=68" alt="" /></div>
           </div>
           <div class="rating-info">
             <div class="rating-stars">★★★★★ <span>4.9</span></div>
@@ -465,18 +429,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <rect width="32" height="32" rx="8" fill="url(#logo-grad2)" />
-              <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <defs>
-                <linearGradient id="logo-grad2" x1="0" y1="0" x2="32" y2="32">
-                  <stop stop-color="#4ADE80" />
-                  <stop offset="1" stop-color="#22D3EE" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <span>ScanAI</span>
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logolumo.png" alt="Lumo" class="nav-logo-img" />
+            <span class="nav-logo-text">lumo</span>
           </a>
           <p class="footer-tagline">Making healthier choices effortless with the power of AI.</p>
         </div>
@@ -496,14 +451,14 @@
         </div>
         <div class="footer-links-group">
           <h4>Legal</h4>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">Contact</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 ScanAI. All rights reserved.</span>
+        <span>&copy; 2026 Lumo AI. All rights reserved.</span>
         <div class="footer-socials">
           <a href="#" aria-label="Twitter">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
