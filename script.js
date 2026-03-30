@@ -369,6 +369,73 @@ function initHeroScoreRing() {
   observer.observe(ring);
 }
 
+// ==================== INFINITE CATEGORY MARQUEE ====================
+function initCategoryMarquee() {
+  const track = document.querySelector(".marquee-track");
+  const inner = document.querySelector(".marquee-inner");
+  if (!track || !inner) return;
+
+  const base =
+    inner.querySelector(".marquee-content[data-marquee-base='true']") ||
+    inner.querySelector(".marquee-content");
+  if (!base) return;
+
+  const baseHTML = base.outerHTML;
+
+  function rebuild() {
+    // Keep only the first base element, then rebuild clones.
+    const baseEl =
+      inner.querySelector(".marquee-content[data-marquee-base='true']") ||
+      inner.querySelector(".marquee-content");
+    if (!baseEl) return;
+
+    Array.from(inner.querySelectorAll(".marquee-content")).forEach((el) => {
+      if (el !== baseEl) el.remove();
+    });
+
+    // Ensure the base is not aria-hidden.
+    baseEl.setAttribute("data-marquee-base", "true");
+    baseEl.removeAttribute("aria-hidden");
+
+    // Append clones until we have enough width to never show empty space.
+    const minWidth = track.clientWidth * 2;
+    // Always ensure at least 2 groups.
+    let safety = 0;
+    while (inner.scrollWidth < minWidth || inner.querySelectorAll(".marquee-content").length < 2) {
+      inner.insertAdjacentHTML("beforeend", baseHTML);
+      const last = inner.lastElementChild;
+      if (last && last !== baseEl) last.setAttribute("aria-hidden", "true");
+      safety += 1;
+      if (safety > 20) break;
+    }
+
+    // Measure base group width (includes its internal spacing).
+    const distance = baseEl.getBoundingClientRect().width;
+    if (distance > 0) {
+      inner.style.setProperty("--marquee-distance", `${distance}px`);
+
+      // Keep a consistent speed across screen sizes.
+      const pxPerSecond = 70;
+      const duration = Math.max(12, distance / pxPerSecond);
+      inner.style.setProperty("--marquee-duration", `${duration}s`);
+    }
+  }
+
+  // Build after layout.
+  requestAnimationFrame(() => {
+    rebuild();
+  });
+
+  // Rebuild on resize (debounced).
+  let t = null;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(t);
+    t = window.setTimeout(() => {
+      rebuild();
+    }, 150);
+  });
+}
+
 // ==================== INIT ====================
 document.addEventListener("DOMContentLoaded", () => {
   initScrollAnimations();
@@ -377,4 +444,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initDemo();
   initSmoothScroll();
   initHeroScoreRing();
+  initCategoryMarquee();
 });
